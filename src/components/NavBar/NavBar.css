@@ -1,0 +1,28 @@
+.navBar {
+    background-color: rgba(192, 10, 10, 0.658);
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navBar ul {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.navBar li {
+    list-style: none;
+}
+
+.navBar li a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+li a:hover {
+    color: rgb(161, 161, 161);
+    cursor: pointer;
+}
