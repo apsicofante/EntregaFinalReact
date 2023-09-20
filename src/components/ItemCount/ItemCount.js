@@ -1,9 +1,8 @@
 import { useState } from "react"
 import './ItemCount.css'
 
-
 const ItemCount = ({stock, initial, onAdd}) => {
-    const [quantity,setQuantity] = useState(initial) 
+    const [quantity, setQuantity] = useState(initial) 
 
     const increment = () => {
         if(quantity< stock) {
@@ -20,12 +19,12 @@ const ItemCount = ({stock, initial, onAdd}) => {
     return (
         <div className='Counter'>
             <div className='Controls'>
-                    <button className="Button" onclick={decrement}>-</button>
+                    <button className="Button" onClick={decrement}>-</button>
                     <h4 className = 'Number'>{quantity}</h4>
-                    <button className="Button" onclick={increment}>+</button>
+                    <button className="Button" onClick={increment}>+</button>
             </div>
             <div>
-                <button className="Button" onclick={() => onAdd(quantity)} disabled={! stock}>
+                <button className="Button" onClick={() => onAdd(quantity)} disabled={! stock}>
                     Agregar al carrito
                 </button>
             </div>

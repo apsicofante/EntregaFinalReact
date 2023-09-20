@@ -1,0 +1,18 @@
+.CardItem {
+color: #ffffff;  
+background: rgba(192, 10, 10, 0.575);
+margin: 0 0 25px; 
+overflow: hidden; 
+padding: 20px; 
+border-radius: 35px 0px 35px 0px; 
+-moz-border-radius: 35px 0px 35px 0px; 
+
+}
+
+.CardItem:hover {
+    transform: scale(1.1);
+}
+
+.CardItem {
+    transition: transform 800ms 0.1s;
+}
