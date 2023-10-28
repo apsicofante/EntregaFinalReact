@@ -1,0 +1,12 @@
+.coffeInfoBody {
+    background-image: url(../../assets/img/granos-de-cafe-png.png);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: top, right;
+    height: max-content;
+    width: 100%;
+}
+
+.coffeInfoBody p {
+    text-align: justify;
+}

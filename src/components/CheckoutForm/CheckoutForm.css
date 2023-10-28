@@ -1,0 +1,14 @@
+.Container {
+   border-color: black;
+   border-radius: 5px;
+}
+
+.Label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Input {
+    border-radius: 5px;
+}
