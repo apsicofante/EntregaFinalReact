@@ -1,11 +1,11 @@
-import { createContext, useState } from "react"
-//import { products } from "../asyncMock"
+import { createContext, useState, useContext } from "react"
+
 
 export const CartContext = createContext({
 	cart: []
 })
 
-export const CartProvider = ({ children }) => {
+const CartProvider = ({ children }) => {
 	const [cart, setCart] = useState([])
 
 	console.log(cart)
@@ -17,13 +17,13 @@ export const CartProvider = ({ children }) => {
             newList[productIndex].quantity = newList[productIndex].quantity + qty;
             newList[productIndex].totalPrice = newList[productIndex].quantity * newList[productIndex].price;
             setCart(newList)
-			//setCart(prev => [...prev, {...item, quantity}])
+			
 		} else {
 			const newProduct={...products, quantity:qty, totalPrice: qty*products.price}
             const newList = [...cart];
             newList.push(newProduct);
             setCart(newList);
-			//console.error('El producto ya fue agregado')
+			
 		}
 	}
 
@@ -36,10 +36,6 @@ export const CartProvider = ({ children }) => {
 		setCart([])
 	}
 
-	//const totalQuantity = ()=>{
-      //  const totalProduct = cart.reduce((acc,item)=>acc + item.quantity,0);
-        //return totalProduct;
-    //}
 
 	
     const totalQuantity = cart.reduce((acc,item)=>acc + item.quantity,0);
@@ -57,6 +53,6 @@ export const CartProvider = ({ children }) => {
 	)
 }
 
-// export const useCart = () => {
-//     return useContext(CartContext)
-// }
+export const useCart = () => useContext(CartContext)
+
+export default CartProvider

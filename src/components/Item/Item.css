@@ -15,4 +15,5 @@
     
     .CardItem {
         transition: transform 800ms 0.1s;
+        width: 180px;
     }

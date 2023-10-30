@@ -1,6 +1,5 @@
 import './CheckoutForm.css'
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
 
 const CheckoutForm = ({ onConfirm }) => {
 	const [name, setName] = useState('') 
@@ -48,9 +47,7 @@ const CheckoutForm = ({ onConfirm }) => {
 					/>
 				</label>
 				<div className='Label'>
-					<Link to='/orden' >
 						<button type='submit' className='Button'>Crear Orden</button>
-					</Link>
 				</div>
             </form>
         </div>

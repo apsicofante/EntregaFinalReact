@@ -1,8 +1,6 @@
 import React, { useContext } from 'react'
 import { CartContext } from '../../context/CartContext';
 import './CartItem.css';
-//import imagenes from '../../assets/img/imagenes';
-//import { products } from "../../asyncMock"
 
 export const CartItem = ({...products}) => {
     const {removeItem} = useContext(CartContext);
